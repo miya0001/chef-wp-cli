@@ -6,8 +6,8 @@ description      'Installs/Configures wp-cli'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
-recipe "wp-cli", "Installs and configures wp-cli"
-#recipe "wp-cli::install", "installs and configures WordPress"
+recipe "wp", "Installs and configures wp-cli"
+#recipe "wp::install", "installs and configures WordPress"
 
 supports "centos"
 supports "redhat"
