@@ -15,4 +15,9 @@ suites:
   - name: default
     run_list:
       - recipe[wp::default]
+      - recipe[wp::install]
     attributes:
+        mysql:
+            server_debian_password: "1111"
+            server_root_password:   "1111"
+            server_repl_password:   "1111"

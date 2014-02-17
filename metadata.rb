@@ -15,6 +15,6 @@ supports "ubuntu"
 
 depends 'apt'
 #depends 'apache2'
-#depends 'mysql'
+depends 'mysql'
 depends 'php'
 #depends 'swap'
