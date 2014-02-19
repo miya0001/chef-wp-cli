@@ -14,7 +14,8 @@ supports "redhat"
 supports "ubuntu"
 
 depends 'apt'
-#depends 'apache2'
+depends 'apache2'
+depends 'nginx'
 depends 'mysql'
 depends 'php'
-#depends 'swap'
+depends 'swap'

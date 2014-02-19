@@ -35,4 +35,5 @@ default[:wp][:httpd][:user]    = 'apache'
 default[:wp][:httpd][:group]   = 'apache'
 default[:wp][:httpd][:docroot] = '/var/www'
 
+default[:wp][:packages] = %w{git subversion curl zip unzip}
 

@@ -4,9 +4,9 @@
 include_recipe "apt::default"
 include_recipe "php"
 
-packages = %w{git subversion curl zip unzip}
+packages = %w{git subversion curl zip unzip gcc build-essential}
 
-packages.each do |pkg|
+node[:wp][:packages].each do |pkg|
   package pkg do
     action [:install, :upgrade]
   end

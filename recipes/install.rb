@@ -13,6 +13,18 @@ if node[:wp][:db][:host] == "localhost"
   include_recipe "mysql::server"
 end
 
+if node['platform_family'] == 'rhel'
+  chef_gem "mysql" do
+      action :nothing
+      subscribes :install, "package[mysql-devel]", :immediately
+  end
+else
+  chef_gem "mysql" do
+      action :nothing
+      subscribes :install, "package[libmysqlclient-dev]", :immediately
+  end
+end
+
 directory node[:wp][:httpd][:docroot] do
   mode   0755
   action :create

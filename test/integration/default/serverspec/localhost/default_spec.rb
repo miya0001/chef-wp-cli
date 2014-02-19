@@ -13,7 +13,7 @@ describe command("wp --info --allow-root") do
   it { should return_exit_status 0 }
 end
 
-describe command("wget -q http://localhost/ -O - | head -100 | grep generator") do
-    it { should return_stdout /wordpress/i }
-end
+#describe command("wget -q http://localhost/ -O - | head -100 | grep generator") do
+#    it { should return_stdout /wordpress/i }
+#end
 
